@@ -7,9 +7,10 @@ def main():
     {% block init %}{% endblock init %}
 
     {% for paragraph in paragraphs %}
-    {{ paragraph.text | safe }}
+    {{ paragraph.text | safe | indent(4) }}
     {% endfor %}
     {% block finalize %}{% endblock %}
+
     pass
 
 
