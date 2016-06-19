@@ -44,3 +44,8 @@ optional arguments:
   --output-dir OUTPUT_DIR
   --language {scala,python}
 ```
+
+Powered by:
+
+- [`pypandoc`](https://github.com/bebraw/pypando) - A wrapper for [Pandoc](http://johnmacfarlane.net/pandoc/).
+- [`toolz`](https://github.com/pytoolz/toolz) - A functional standard library for Python.
