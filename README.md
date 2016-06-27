@@ -20,29 +20,36 @@ usage: airship-convert render [-h] [--output-dir OUTPUT_DIR] [--format FORMAT]
                               paths [paths ...]
 
 positional arguments:
-  paths
+  paths                 At least one path to the notebook directory (one that
+                        contains note.json file).
 
 optional arguments:
   -h, --help            show this help message and exit
   --output-dir OUTPUT_DIR
-  --format FORMAT
+                        Directory to put output files.
+  --format FORMAT       Pandoc supported output format.
   --default-lang DEFAULT_LANG
+                        Language to be used if there is no interpreter
+                        annotation.
 ```
 
 ### Code extraction
 
 ```bash
 usage: airship-convert extract [-h] [--output-dir OUTPUT_DIR]
-                               [--language LANGUAGE]
+                               [--language {scala,python}]
                                paths [paths ...]
 
 positional arguments:
-  paths
+  paths                 At least one path to the notebook directory (one that
+                        contains note.json file).
 
 optional arguments:
   -h, --help            show this help message and exit
   --output-dir OUTPUT_DIR
+                        Directory to put output files.
   --language {scala,python}
+                        Which language should be extracted.
 ```
 
 Powered by:
