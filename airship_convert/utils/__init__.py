@@ -6,5 +6,5 @@ import os
 
 
 def path_for_notebook(notebook, output_dir, output_format):
-    file_name = "{0}.{1}".format(notebook.get("id"), output_format)
+    file_name = "{0}.{1}".format(notebook.get("name").replace("/", "_"), output_format)
     return os.path.join(output_dir, file_name)
