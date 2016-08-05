@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function, division, absolute_import
+import codecs
 
 from jinja2 import PackageLoader, Environment
 from toolz import curry
@@ -17,7 +18,7 @@ template_for_language = {
 
 
 def render_source_(notebook, output_file, template):
-    with open(output_file, "w") as fw:
+    with codecs.open(output_file, mode="w", encoding="utf-8") as fw:
         fw.write(template.render(notebook))
 
 
